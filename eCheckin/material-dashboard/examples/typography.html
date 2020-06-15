@@ -4,7 +4,7 @@
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
-  <meta charset="utf-8" />
+ <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -76,61 +76,61 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="dashboard.html" class="simple-text logo-normal">
+      <div class="logo"><a href="dashboard" class="simple-text logo-normal">
          VMS
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item  ">
-            <a class="nav-link" href="dashboard.html">
+            <a class="nav-link" href="dashboard">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="user.html">
+            <a class="nav-link" href="user">
               <i class="material-icons">person</i>
               <p>Employee Directory</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="tables">
               <i class="material-icons">content_paste</i>
               <p>Table List</p>
             </a>
           </li>
           <li class="nav-item active ">
-            <a class="nav-link" href="typography.html">
+            <a class="nav-link" href="typography">
               <i class="material-icons">library_books</i>
               <p>Schedule A Meeting</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="icons.html">
+            <a class="nav-link" href="icons">
               <i class="material-icons">bubble_chart</i>
               <p>Icons</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="map.html">
+            <a class="nav-link" href="map">
               <i class="material-icons">location_ons</i>
               <p>Maps</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="notifications.html">
+            <a class="nav-link" href="notifications">
               <i class="material-icons">notifications</i>
               <p>Notifications</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="rtl.html">
+            <a class="nav-link" href="rtl">
               <i class="material-icons">language</i>
               <p>RTL Support</p>
             </a>
           </li>
           <li class="nav-item active-pro ">
-            <a class="nav-link" href="upgrade.html">
+            <a class="nav-link" href="upgrade">
               <i class="material-icons">unarchive</i>
               <p>Upgrade to PRO</p>
             </a>
@@ -209,8 +209,9 @@
         <div class="container-fluid">
           <div class="card">
             <div class="card-header card-header-primary">
-              <h4 class="card-title">Material Dashboard Heading</h4>
-              <p class="card-category">Created using Roboto Font Family</p>
+              <h4 class="card-title">Schedule Meeting</h4>
+              <p class="card-category">You can pre-schedule meetings with your visitors to enable a smooth check-in process. Fill your visitor details below.
+</p>
             </div>
             
               <!-- Default form register -->
@@ -218,74 +219,43 @@
   <div class="form-row mb-4">
       <div class="col">
           <!-- First name -->
-          <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+          <input type="text" id="name" class="form-control" placeholder="Full name">
       </div>
       <div class="col">
           <!-- Last name -->
-          <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name">
+          <input type="text" id="company" class="form-control" placeholder="Company">
       </div>
   </div>
   <div class="form-row mb-4">
     <div class="col">
-        <!-- E-mail -->
-  <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+  <input type="email" id="email" class="form-control mb-4" placeholder="E-mail">
 </div>
     <div class="col">
        <!-- Phone number -->
-  <input type="number" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+  <input type="number" id="phoneNo" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" required>
 </div>
 </div>
+<p align="left">DATE AND TIME OF VISIT:</p>
 <div class="form-row mb-4">
-  <div class="col">
-      <!-- E-mail -->
-<input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+<div class="col">
+<input type="date" id="date" class="form-control mb-4" placeholder="Date Of Visit" required>
 </div>
-  <div class="col">
-    <span>Subject</span>
-    <select class="mdb-select">
-        <option value="" disabled>Choose option</option>
-        <option value="1" selected>Feedback</option>
-        <option value="2">Report a bug</option>
-        <option value="3">Feature request</option>
-        <option value="4">Feature request</option>
-    </select></div>
+
+
+<div class="col">
+
+<input type="time" id="time" class="form-control mb-4" placeholder="Time Of Visit" required>
 </div>
-  
-  <!-- Password -->
-  <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
-  <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
-      At least 8 characters and 1 digit
-  </small>
 
-   <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-      Optional - for two step authentication
-  </small>
+</div>
 
-  <!-- Newsletter -->
-  <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-      <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our newsletter</label>
-  </div>
+  <input type="text" id="purpose" class="form-control" placeholder="Purpose Of Meeting" aria-describedby="defaultRegisterFormPasswordHelpBlock"><br><br>
+  <input type="text" id="person" class="form-control" placeholder="Person to Meet" aria-describedby="defaultRegisterFormPasswordHelpBlock">
 
-  <!-- Sign up button -->
-  <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+  <button class="btn btn-info my-4 btn-block" type="submit">Schedule Meeting</button>
 
-  <!-- Social register -->
-  <p>or sign up with:</p>
-
-  <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-  <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-  <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-  <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
-
-  <hr>
-
-  <!-- Terms of service -->
-  <p>By clicking
-      <em>Sign up</em> you agree to our
-      <a href="" target="_blank">terms of service</a>
-
-</form>
+  </form>
 <!-- Default form register -->
               </div>
             </div>
