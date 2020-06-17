@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.file-upload input[type='file'] {
+  display: none;
+}
+
+body {
+  background: #00B4DB;
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+  background: linear-gradient(to right, #0083B0, #00B4DB);
+  height: 100vh;
+}
+
+.rounded-lg {
+  border-radius: 1rem;
+}
+
+.custom-file-label.rounded-pill {
+  border-radius: 50rem;
+}
+
+.custom-file-label.rounded-pill::after {
+  border-radius: 0 50rem 50rem 0;
+}
+
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.2.3-v2/dist/dbr.js" data-productKeys="t0068NQAAAFqFGyaCOlV91f6RZP4hcrrsL3R3pPcqSWSmZbv03Ieqr8dzu71ymDD3kt7Vc5/ueYitZEOuxLG8Lq4QBFvDfRc="></script>
+
+    
+  <section>
+  <div class="container p-5">
+  <div class="row mb-5 text-center text-white">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="display-4">Aadhar card upload</h1>
+        <p class="lead">Please upload the photo of your Aadhar Card for Government ID verification</p>
+      </div>
+   </div>
+
+    <div class="row">
+      <div class="col-lg-5 mx-auto">
+        <div class="p-5 bg-white shadow rounded-lg">
+        <img src="https://res.cloudinary.com/mhmd/image/upload/v1557366994/img_epm3iz.png" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+
+          <div class="custom-file overflow-hidden rounded-pill mb-5">
+            <input id="uploadImage" type="file" class="custom-file-input rounded-pill" accept="image/bmp,image/jpeg,image/png,image/gif">
+            <label for="customFile" class="custom-file-label rounded-pill">Choose file</label>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <p id="results"></p>
+
+    <script>
+        document.getElementById('uploadImage').addEventListener('change', async function () {
+            $("#results").empty();
+            var files = this.files;
+            let reader = await Dynamsoft.BarcodeReader.createInstance();
+            let results = await reader.decode(files[0]);
+            if (results.length == 0) {
+                $("#results").append('No barcode detected!');
+                return;
+            }
+            for (let result of results) {
+                console.log(result.barcodeText);
+                try {
+
+                    xmlDoc = $.parseXML(result.barcodeText),
+
+                        $(xmlDoc).each(function (i, obj) {
+
+                            $data = $(xmlDoc).find(obj.documentElement.nodeName);
+                            $data.each(function () {
+
+                                $.each(this.attributes, function (i, attrib) {
+                                    var name = attrib.name;
+                                    var value = attrib.value;
+
+                                    if(name == "name")
+                                    {                                    
+                                    var temp = value;   // We need this name for name verification                               
+                                    }
+                                    info = '<div>' + name + ': ' + '<div>'+ value +'<br>' ;
+                                    $("#results").append(info);
+                                    
+                                });
+                            });
+                        });
+                } catch (error) {
+                    $("#results").append(error.message);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
