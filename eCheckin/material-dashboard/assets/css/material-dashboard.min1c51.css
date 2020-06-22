@@ -591,6 +591,11 @@ pre code {
     margin-right: -15px;
     margin-left: -15px
 }
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px
+}
 
 .no-gutters {
     margin-right: 0;
@@ -3071,7 +3076,9 @@ tbody.collapse.show {
 
 .input-group>.custom-select:not(:first-child),.input-group>.form-control:not(:first-child) {
     border-top-left-radius: 0;
-    border-bottom-left-radius: 0
+    border-bottom-left-radius: 0;
+    margin: 15px 0 0;
+    padding-bottom: 10px;
 }
 
 .input-group>.custom-file {
@@ -4752,8 +4759,47 @@ button.close {
     background-color: #1d2124
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 .modal,.modal-open {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .modal {
@@ -4793,12 +4839,36 @@ button.close {
     align-items: center;
     min-height: calc(100% - 1rem)
 }
+.sidebar .user .photo img
+{
+    width: 100%;
+}
+.sidebar .user
+{
+    padding-bottom: 20px;
+    margin: 20px auto 0;
+    position: relative;
+}
+.sidebar .user .photo
+{
+    
+        width: 34px;
+        height: 34px;
+        overflow: hidden;
+        float: left; 
+        z-index: 5;
+        margin-right: 11px;
+        border-radius: 50%;
+        margin-left: 23px;
+        box-shadow: 0 16px 38px -12px rgba(0,0,0,.56), 0 4px 25px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+    
+}
 
 .modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     pointer-events: auto;
     background-color: #fff;
     background-clip: padding-box;
@@ -8026,7 +8096,7 @@ a.text-info:focus,a.text-info:hover {
 }
 
 .text-warning {
-    color: #ffeb3b!important
+    color: #555!important
 }
 
 a.text-warning:focus,a.text-warning:hover {
@@ -8463,7 +8533,7 @@ a.text-dark:focus,a.text-dark:hover {
 
 .btn.btn-rose.btn-link,.btn.btn-rose.btn-link:active,.btn.btn-rose.btn-link:focus,.btn.btn-rose.btn-link:hover {
     background-color: transparent;
-    color: #e91e63
+    color: #212529
 }
 
 .btn,.btn.btn-default {
@@ -11491,11 +11561,11 @@ h2.title {
 }
 
 .text-warning {
-    color: #ff9800!important
+    color: #555!important
 }
 
 .text-primary {
-    color: #9c27b0!important
+    color: #555!important
 }
 
 .text-danger {
@@ -12385,8 +12455,8 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .sidebar[data-color=purple] li.active>a {
-    background-color: #9c27b0;
-    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(156,39,176,.4)
+    background-color: #08165d;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(151,174,176,.4)
 }
 
 .sidebar[data-color=azure] li.active>a {
@@ -12481,8 +12551,19 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     width: calc(100% - 260px);
     transition: .33s,cubic-bezier(.685,.0473,.346,1)
 }
+.main-panel1 {
+    position: relative;
+    transition: .33s,cubic-bezier(.685,.0473,.346,1)
+}
+
 
 .main-panel>.content {
+    margin-top: 70px;
+    padding: 30px 15px;
+    min-height: calc(100vh - 123px)
+}
+
+.main-panel1>.content {
     margin-top: 70px;
     padding: 30px 15px;
     min-height: calc(100vh - 123px)
@@ -13514,7 +13595,7 @@ legend {
 }
 
 a {
-    color: #9c27b0
+    color: #00bcd4
 }
 
 a:focus,a:hover {
@@ -13933,7 +14014,7 @@ html[dir=rtl] .form-check .form-check-sign .check:before {
 }
 
 .card.bg-rose,.card .card-header-rose .card-icon,.card .card-header-rose .card-text,.card .card-header-rose:not(.card-header-icon):not(.card-header-text),.card.card-rotate.bg-rose .back,.card.card-rotate.bg-rose .front {
-    background: linear-gradient(60deg,#ec407a,#d81b60)
+    background: linear-gradient(60deg,#00bcd4,#00bcd4)
 }
 
 .card .card-header-primary .card-icon,.card .card-header-primary .card-text,.card .card-header-primary:not(.card-header-icon):not(.card-header-text) {
@@ -14768,8 +14849,12 @@ html[dir=rtl] .form-check .form-check-sign .check:before {
         transform: translate3d(230px,0,0);
         transition: all .5s cubic-bezier(.685,.0473,.346,1)
     }
-
+    .off-canvas-sidebar .navbar-collapse:after
+    {
+        background-color:#282828;
+    }
     .navbar-collapse:after {
+        
         top: 0;
         left: 0;
         height: 100%;
@@ -14974,9 +15059,9 @@ html[dir=rtl] .form-check .form-check-sign .check:before {
     .presentation-page .section-components .coloured-card-btn-img {
         top: -2%
     }
-
+   
     .login-page .container {
-        padding-top: 100px!important
+        padding-top: 0px!important
     }
 
     .index-page #cd-vertical-nav,.presentation-page #cd-vertical-nav,.section-page #cd-vertical-nav {
