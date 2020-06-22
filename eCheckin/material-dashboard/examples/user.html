@@ -75,38 +75,116 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="dashboard.html" class="simple-text logo-normal">
-         VMS
-        </a></div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item  ">
-            <a class="nav-link" href="dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="user.html">
-              <i class="material-icons">person</i>
-              <p>Employee Directory</p>
-            </a>
-          </li>
-          
-          <li class="nav-item ">
-            <a class="nav-link" href="typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Schedule A Meeting</p>
-            </a>
-          </li>
-         
-         
-         
-         
-         
-        </ul>
-      </div>
-    </div>
+    <div class="logo"><a href="dashboard.html" class="simple-text logo-normal">
+      <img src="../assets/img/logo.png"  >
+     </a></div>
+   <div class="sidebar-wrapper">
+     <div class="user">
+       <div class="photo">
+         <img src="../assets/img/molog.png" >
+       </div>
+       <div class="user-info">
+         <a data-toggle="collapse" href="#collapseExample" class="username">
+           <span>
+            Shweta Sharma
+             <b class="caret"></b>
+           </span>
+         </a>
+         <div class="collapse" id="collapseExample">
+           <ul class="nav">
+             <li class="nav-item">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> MP </span>
+                 <span class="sidebar-normal"> My Profile </span>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> EP </span>
+                 <span class="sidebar-normal"> Edit Profile </span>
+               </a>
+             </li>
+            
+           </ul>
+         </div>
+       </div>
+     </div>
+     
+     <ul class="nav">
+       <li class="nav-item   ">
+         <a class="nav-link" href="dashboard.html">
+           <i class="material-icons">dashboard</i>
+           <p>Dashboard</p>
+         </a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="user.html">
+           <i class="material-icons">person</i>
+           <p>Employee Directory</p>
+         </a>
+       </li>
+       
+       <li class="nav-item ">
+         <a class="nav-link" href="typography.html">
+           <i class="material-icons">library_books</i>
+           <p>Schedule A Meeting</p>
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="#">
+           <i class="material-icons">exit_to_app</i>
+           <p>Evacuation</p>
+         </a>
+       </li>
+      <li class="nav-item ">
+         <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+           <i class="material-icons">settings</i>
+           <p> Settings
+             <b class="caret"></b>
+           </p>
+         </a>
+         <div class="collapse" id="pagesExamples">
+           <ul class="nav">
+             <li class="nav-item ">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> VS </span>
+                 <span class="sidebar-normal"> Visitors Settings </span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> CS </span>
+                 <span class="sidebar-normal">Contactless Settings </span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> ES </span>
+                 <span class="sidebar-normal"> Employee Settings</span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> NS </span>
+                 <span class="sidebar-normal"> Notification Settings </span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> SS </span>
+                 <span class="sidebar-normal"> Security Screening </span>
+               </a>
+             </li>
+             
+           </ul>
+         </div>
+       </li>
+      
+      
+      
+     </ul>
+   </div>
+ </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -177,7 +255,7 @@
           <div class="row">
             <div class="col-md-9">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                   <h4 class="card-title">Add New Employee</h4>
                   <p class="card-category">Complete your profile</p>
                 </div>
@@ -270,7 +348,7 @@
                     </div>
                   </div>
                 </br>
-                    <button type="submit" class="btn btn-primary pull-right">Save Profile</button>
+                    <button type="submit" class="btn btn-info pull-right">Save Profile</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -279,7 +357,7 @@
             <!--Card start-->
             <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
-                <div class="card-header card-header-warning card-header-icon">
+                <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
                     <i class="material-icons">people</i>
                   </div>
@@ -301,7 +379,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-info">
                   <h4 class="card-title ">Added Employee</h4>
                   </div>
                 <div class="card-body">
