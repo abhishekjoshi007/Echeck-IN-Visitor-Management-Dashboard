@@ -76,38 +76,116 @@
 
         Tip 2: you can also add an image using data-image tag
     -->
-      <div class="logo"><a href="dashboard" class="simple-text logo-normal">
-         VMS
-        </a></div>
-      <div class="sidebar-wrapper">
-        <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="dashboard.html">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="user.html">
-              <i class="material-icons">person</i>
-              <p>Employee Directory</p>
-            </a>
-          </li>
-          
-          <li class="nav-item active">
-            <a class="nav-link" href="typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Schedule A Meeting</p>
-            </a>
-          </li>
-         
-         
-         
-         
-         
-        </ul>
-      </div>
-    </div>
+    <div class="logo"><a href="dashboard.html" class="simple-text logo-normal">
+      <img src="../assets/img/logo.png"  >
+     </a></div>
+   <div class="sidebar-wrapper">
+     <div class="user">
+       <div class="photo">
+         <img src="../assets/img/molog.png" >
+       </div>
+       <div class="user-info">
+         <a data-toggle="collapse" href="#collapseExample" class="username">
+           <span>
+            Shweta Sharma
+             <b class="caret"></b>
+           </span>
+         </a>
+         <div class="collapse" id="collapseExample">
+           <ul class="nav">
+             <li class="nav-item">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> MP </span>
+                 <span class="sidebar-normal"> My Profile </span>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">
+                 <span class="sidebar-mini"> EP </span>
+                 <span class="sidebar-normal"> Edit Profile </span>
+               </a>
+             </li>
+            
+           </ul>
+         </div>
+       </div>
+     </div>
+     
+     <ul class="nav">
+       <li class="nav-item  ">
+         <a class="nav-link" href="dashboard.html">
+           <i class="material-icons">dashboard</i>
+           <p>Dashboard</p>
+         </a>
+       </li>
+       <li class="nav-item ">
+         <a class="nav-link" href="user.html">
+           <i class="material-icons">person</i>
+           <p>Employee Directory</p>
+         </a>
+       </li>
+       
+       <li class="nav-item active ">
+         <a class="nav-link" href="typography.html">
+           <i class="material-icons">library_books</i>
+           <p>Schedule A Meeting</p>
+         </a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="">
+           <i class="material-icons">exit_to_app</i>
+           <p>Evacuation</p>
+         </a>
+       </li>
+      <li class="nav-item ">
+         <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
+           <i class="material-icons">settings</i>
+           <p> Settings
+             <b class="caret"></b>
+           </p>
+         </a>
+         <div class="collapse" id="pagesExamples">
+           <ul class="nav">
+             <li class="nav-item ">
+               <a class="nav-link" href="../examples/pages/pricing.html">
+                 <span class="sidebar-mini"> VS </span>
+                 <span class="sidebar-normal"> Visitors Settings </span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="../examples/pages/rtl.html">
+                 <span class="sidebar-mini"> CS </span>
+                 <span class="sidebar-normal">Contactless Settings </span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="../examples/pages/timeline.html">
+                 <span class="sidebar-mini"> ES </span>
+                 <span class="sidebar-normal"> Employee Settings</span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="../examples/pages/login.html">
+                 <span class="sidebar-mini"> NS </span>
+                 <span class="sidebar-normal"> Notification Settings </span>
+               </a>
+             </li>
+             <li class="nav-item ">
+               <a class="nav-link" href="../examples/pages/register.html">
+                 <span class="sidebar-mini"> SS </span>
+                 <span class="sidebar-normal"> Security Screening </span>
+               </a>
+             </li>
+             
+           </ul>
+         </div>
+       </li>
+      
+      
+      
+     </ul>
+   </div>
+ </div>
     <div class="main-panel">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
@@ -178,7 +256,7 @@
       <div class="content">
         <div class="container-fluid">
           <div class="card">
-            <div class="card-header card-header-primary">
+            <div class="card-header card-header-info">
               <h4 class="card-title">Schedule Meeting</h4>
               <p class="card-category">You can pre-schedule meetings with your visitors to enable a smooth check-in process. Fill your visitor details below.
 </p>
@@ -224,7 +302,7 @@
   <input type="text" id="purpose" class="form-control" placeholder="Purpose Of Meeting" aria-describedby="defaultRegisterFormPasswordHelpBlock" required><br><br>
   <input type="text" id="person" class="form-control" placeholder="Person To Meet" aria-describedby="defaultRegisterFormPasswordHelpBlock" >
 
-  <button class="btn btn-primary my-4 btn-block" type="submit">Schedule Meeting</button>
+  <button class="btn btn-info my-4 btn-block" type="submit">Schedule Meeting</button>
 
   </form>
 <!-- Default form register -->
