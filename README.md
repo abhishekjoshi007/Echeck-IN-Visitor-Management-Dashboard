@@ -10,8 +10,8 @@
 
 
 
-[![Contributors][contributors-shield]][contributors-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/abhishek-joshi-510b68151/]
 
 
 
